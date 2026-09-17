@@ -52,10 +52,27 @@ body {
     /* border: 1px solid red; */
 }
 
+#rowOne {
+    display: flex;
+    gap: 2px;
+}
+
 .calBtn {
     width: 80px;
     height: 70px;
     box-shadow: 10px 4px 5px 2px rgba(0, 0, 0, 0.275);
-    border: 2px solid black;
+    border: 2px solid rgba(0, 0, 0, 0.793);
     border-radius: 8px;
+    background-color: #B7BBBE;
+    color: #141517;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+#clearBtn {
+    width: 165px;
+}
+
+#backSpaceBtn {
+    width: 165px;
 }
