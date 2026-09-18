@@ -5,8 +5,7 @@ const numTwo = document.querySelector("#numTwo");
 const equalSign = document.querySelector("#equalSign");
 const answer = document.querySelector("#answer");
 
-numOne.textContent = 12;
-operatorType.textContent = "+"
-numTwo.textContent = 12;
-equalSign.textContent = "=";
-answer.textContent = 24;
+// Clear and Backspace Button
+const clearBtn = document.querySelector("#clearBtn");
+const backSpaceBtn = document.querySelector("#backSpaceBtn");
+
