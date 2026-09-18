@@ -71,8 +71,44 @@ body {
 
 #clearBtn {
     width: 165px;
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
 }
 
 #backSpaceBtn {
     width: 165px;
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
+}
+
+#division {
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
+}
+
+#multiply {
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
+}
+
+#subtract {
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
+}
+
+#equals {
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
+}
+
+#addition {
+    background-color: #6D9FD0;
+    color: #E9EFF7;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.588);
 }
