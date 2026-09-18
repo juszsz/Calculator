@@ -36,6 +36,78 @@ const numBtns = {
     btn9: document.querySelector("#btn9"),
 }
 
+let numOne = "";
+let numTwo = "";
+function maxNum(numOne, numTwo) {
+    if (numOne.length > 12 || numTwo.length > 12) {
+        alert("Error, Max digit limit!");
+        numOne = ""
+        display.numOne.textContent = 0
+    }
+}
+function add(num1, num2) {
+    return num1 + num2;
+}
+
 numBtns.btn0.addEventListener("click", () => {
-    alert("Clicked!");
+    maxNum(numOne, numTwo)
+    display.numOne.textContent += 0;
+    numOne += "0";
+    console.log(numOne);
 })
+
+numBtns.btn1.addEventListener("click", () => {
+    display.numOne.textContent += 1;
+    numOne += "1";
+    console.log(numOne);
+})
+
+numBtns.btn2.addEventListener("click", () => {
+    display.numOne.textContent += 2;
+    numOne += 2;
+    console.log(numOne);
+})
+
+numBtns.btn3.addEventListener("click", () => {
+    display.numOne.textContent += 3;
+    numOne += 3;
+    console.log(numOne);
+})
+
+numBtns.btn4.addEventListener("click", () => {
+    display.numOne.textContent += 4;
+    numOne += 4;
+    console.log(numOne);
+})
+
+numBtns.btn5.addEventListener("click", () => {
+    display.numOne.textContent += 5;
+    numOne += 5;
+    console.log(numOne);
+})
+
+numBtns.btn6.addEventListener("click", () => {
+    display.numOne.textContent += 6;
+    numOne += 6;
+    console.log(numOne);
+})
+
+numBtns.btn7.addEventListener("click", () => {
+    display.numOne.textContent += 7;
+    numOne += 7;
+    console.log(numOne);
+})
+
+numBtns.btn8.addEventListener("click", () => {
+    display.numOne.textContent += 8;
+    numOne += 8;
+    console.log(numOne);
+})
+
+numBtns.btn9.addEventListener("click", () => {
+    display.numOne.textContent += 9;
+    numOne += 9;
+    console.log(numOne);
+})
+
+console.log(numOne)
