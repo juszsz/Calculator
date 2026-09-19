@@ -48,15 +48,12 @@ btnCon.addEventListener("click", (event) => {
         }
         
     }
-})
 
-function maxNum() {
-    if (numOne.length < 11 || numTwo.length < 12) {
-        alert("Error, Max digit limit!");
-        display.numOne.textContent = "Error"
-        return numOne = "Error";
+    if(value === "+") {
+            operator = value;
+            display.operatorType.textContent = operator;
     }
-}
+})
 
 function add(num1, num2) {
     return num1 + num2;
