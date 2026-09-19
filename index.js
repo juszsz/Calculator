@@ -45,16 +45,21 @@ btnCon.addEventListener("click", (event) => {
             console.log(numTwo)
             display.numTwo.textContent += value
             }
-        }
-        
+        }  
     }
 
     if(value === "+") {
             operator = value;
             display.operatorType.textContent = operator;
     }
+
+                if(value === "=") {
+                    display.equalSign.textContent = value
+                    add(numOne, numTwo);
+                }
+
 })
 
 function add(num1, num2) {
-    return num1 + num2;
+    display.answer.textContent = Number(num1) + Number(num2);
 }
