@@ -40,24 +40,29 @@ btnCon.addEventListener("click", (event) => {
             console.log(numOne)
             display.numOne.textContent += value
             }
-        } else if(operator === "+" || operator === "-" || operator === "x" || operator === "/" ) {
-            if(numTwo.length < 12 ) {
-            numTwo += value
-            console.log(numTwo)
-            display.numTwo.textContent += value
+        } else if(operator === "+" || operator === "-" || operator === "x" || operator === "/") {
+            if(equal === null) {
+                if(numTwo.length < 12 ) {
+                numTwo += value
+                console.log(numTwo)
+                display.numTwo.textContent += value
+                }
             }
-        }  
+        }
     }
 
-    if(value === "+") {
+    if(value === "+" || value === "-" || value === "x" || value === "/") {
             operator = value;
             display.operatorType.textContent = operator;
     }
 
     if(value === "=") {
+        equal = value;
         display.equalSign.textContent = value
         if(operator === "+") {
-            add(numOne, numTwo);
+            add(numOne, numTwo)
+        } else if(operator === "-") {
+            subtract(numOne, numTwo)
         }
     }
 
@@ -65,4 +70,16 @@ btnCon.addEventListener("click", (event) => {
 
 function add(num1, num2) {
     display.answer.textContent = Number(num1) + Number(num2);
+}
+
+function subtract(num1, num2) {
+    display.answer.textContent = Number(num1) - Number(num2);
+}
+
+function multiply(num1, num2) {
+    display.answer.textContent = Number(num1) * Number(num2);
+}
+
+function divide(num1, num2) {
+    display.answer.textContent = Number(num1) / Number(num2);
 }
