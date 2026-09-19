@@ -25,6 +25,7 @@ const operatorEqual = {
 let numOne = "";
 let numTwo = "";
 let operator = null;
+let equal = null;
 
 const btnCon = document.querySelector(".btnCon");
 btnCon.addEventListener("click", (event) => {
@@ -53,10 +54,12 @@ btnCon.addEventListener("click", (event) => {
             display.operatorType.textContent = operator;
     }
 
-                if(value === "=") {
-                    display.equalSign.textContent = value
-                    add(numOne, numTwo);
-                }
+    if(value === "=") {
+        display.equalSign.textContent = value
+        if(operator === "+") {
+            add(numOne, numTwo);
+        }
+    }
 
 })
 
