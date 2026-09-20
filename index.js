@@ -56,17 +56,27 @@ btnCon.addEventListener("click", (event) => {
             display.operatorType.textContent = operator;
     }
 
+    operate(operator, value, numOne, numTwo)
+
+})
+
+function operate(operator, value, numOne, numTwo) {
     if(value === "=") {
         equal = value;
         display.equalSign.textContent = value
-        if(operator === "+") {
+        if(numOne != '' && numTwo != '') {
+            if(operator === "+") {
             add(numOne, numTwo)
-        } else if(operator === "-") {
-            subtract(numOne, numTwo)
+            } else if(operator === "-") {
+                subtract(numOne, numTwo)
+            } else if(operator === "x") {
+                multiply(numOne, numTwo)
+            } else if(operator === "/") {
+                divide(numOne, numTwo)
+            }
         }
     }
-
-})
+}
 
 function add(num1, num2) {
     display.answer.textContent = Number(num1) + Number(num2);
@@ -81,5 +91,9 @@ function multiply(num1, num2) {
 }
 
 function divide(num1, num2) {
-    display.answer.textContent = Number(num1) / Number(num2);
+    if(num2 === "0") {
+        alert("Nice try!");
+    } else {
+        display.answer.textContent = Number(num1) / Number(num2);
+    }
 }
