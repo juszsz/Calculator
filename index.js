@@ -75,6 +75,18 @@ btnCon.addEventListener("click", (event) => {
             operator = null;
         }
     }
+
+    if (value === "Clear") {
+        numOne = "";
+        numTwo = "";
+        operator = null;
+        
+        display.numOne.textContent = "";
+        display.operatorType.textContent = "";
+        display.numTwo.textContent = "";
+        display.equalSign.textContent = "";
+        display.answer.textContent = "";
+    }
 })
 
 function operate(operator, num1, num2) {
