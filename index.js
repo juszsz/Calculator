@@ -25,8 +25,6 @@ const operatorEqual = {
 let numOne = "";
 let numTwo = "";
 let operator = null;
-let equal = null;
-let answer = "";
 
 const btnCon = document.querySelector(".btnCon");
 btnCon.addEventListener("click", (event) => {
@@ -75,28 +73,43 @@ btnCon.addEventListener("click", (event) => {
 })
 
 function operate(operator, num1, num2) {
-        if(operate === "+" ) {
-            return add()
+        if(operator === "+" ) {
+            return add(num1, num2)
         }
+
+        if(operator === "-" ) {
+            return subtract(num1, num2)
+        }
+
+        if(operator === "x" ) {
+            return multiply(num1, num2)
+        }
+
+        if(operator === "/" ) {
+            return divide(num1, num2)
+        }
+        
+        return ""
 }
 
 function add(num1, num2) {
     // display.answer.textContent = Number(numOne) + Number(numTwo);
-    return answer = Number(numOne) + Number(numTwo);
+    return Number(numOne) + Number(numTwo);
 }
 
 function subtract(num1, num2) {
-    display.answer.textContent = Number(num1) - Number(num2);
+    return Number(num1) - Number(num2);
 }
 
 function multiply(num1, num2) {
-    display.answer.textContent = Number(num1) * Number(num2);
+    return Number(num1) * Number(num2);
 }
 
 function divide(num1, num2) {
     if(num2 === "0") {
         alert("Nice try!");
+        return "Error"
     } else {
-        display.answer.textContent = Number(num1) / Number(num2);
+        return Number(num1) / Number(num2);
     }
 }
