@@ -26,6 +26,7 @@ let numOne = "";
 let numTwo = "";
 let operator = null;
 let equal = null;
+let answer = "";
 
 const btnCon = document.querySelector(".btnCon");
 btnCon.addEventListener("click", (event) => {
@@ -40,33 +41,22 @@ btnCon.addEventListener("click", (event) => {
             console.log(numOne)
             display.numOne.textContent += value
             }
-        } else if(operator === "+" || operator === "-" || operator === "x" || operator === "/") {
-            if(equal === null) {
+        } else {
                 if(numTwo.length < 12 ) {
                 numTwo += value
                 console.log(numTwo)
                 display.numTwo.textContent += value
                 }
-            }
         }
     }
 
-    if(value === "+" || value === "-" || value === "x" || value === "/") {
-            operator = value;
-            display.operatorType.textContent = operator;
-    }
-
-    operate(operator, value, numOne, numTwo)
-
-})
-
-function operate(operator, value, numOne, numTwo) {
-    if(value === "=") {
-        equal = value;
-        display.equalSign.textContent = value
-        if(numOne != '' && numTwo != '') {
-            if(operator === "+") {
-            add(numOne, numTwo)
+    if(numOne !== '' && numTwo !== '') {
+        if(value === "+" || value === "-" || value === "x" || value === "/") {
+        display.operatorType.textContent = operator;
+        operator = value;
+            if(value === "+") {
+            display.numOne.textContent = numOne = add();
+            display.numTwo.textContent = numTwo = ""
             } else if(operator === "-") {
                 subtract(numOne, numTwo)
             } else if(operator === "x") {
@@ -76,10 +66,23 @@ function operate(operator, value, numOne, numTwo) {
             }
         }
     }
+
+    if(value === "=") {
+        operate(value)
+    }
+
+
+})
+
+function operate(operator, num1, num2) {
+        if(operate === "+" ) {
+            return add()
+        }
 }
 
 function add(num1, num2) {
-    display.answer.textContent = Number(num1) + Number(num2);
+    // display.answer.textContent = Number(numOne) + Number(numTwo);
+    return answer = Number(numOne) + Number(numTwo);
 }
 
 function subtract(num1, num2) {
