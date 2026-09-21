@@ -56,24 +56,25 @@ btnCon.addEventListener("click", (event) => {
 
         display.numOne.textContent = numOne;
         display.numTwo.textContent = "";
-            if(value === "+") {
-            display.numOne.textContent = numOne = add();
-            display.numTwo.textContent = numTwo = ""
-            } else if(operator === "-") {
-                subtract(numOne, numTwo)
-            } else if(operator === "x") {
-                multiply(numOne, numTwo)
-            } else if(operator === "/") {
-                divide(numOne, numTwo)
-            }
+        }
+
+        if(numOne !== "") {
+            operator = value;
+            display.operatorType.textContent = operator;
         }
     }
 
     if(value === "=") {
-        operate(value)
+        if(numOne !== "" && numTwo !== "" && operator !== null) {
+            const result = operate(operator, numOne, numTwo);
+            display.equalSign.textContent = "=";
+            display.answer.textContent = result;
+
+            numOne = String(result);
+            numTwo = "";
+            operator = null;
+        }
     }
-
-
 })
 
 function operate(operator, num1, num2) {
