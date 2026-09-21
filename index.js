@@ -48,10 +48,14 @@ btnCon.addEventListener("click", (event) => {
         }
     }
 
+    if(value === "+" || value === "-" || value === "x" || value === "/") {
     if(numOne !== '' && numTwo !== '') {
-        if(value === "+" || value === "-" || value === "x" || value === "/") {
-        display.operatorType.textContent = operator;
-        operator = value;
+        const result = operate(operator, numOne, numTwo);
+        numOne = String(result);
+        numTwo = "";
+
+        display.numOne.textContent = numOne;
+        display.numTwo.textContent = "";
             if(value === "+") {
             display.numOne.textContent = numOne = add();
             display.numTwo.textContent = numTwo = ""
